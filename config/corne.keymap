@@ -1,0 +1,31 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+
+                layer1 {
+                        status = "reserved";
+                };
+
+                laye2 {
+                        status = "reserved";
+                };
+
+                layer3 {
+                        status = "reserved";
+                };
+
+                layer4 {
+                        status = "reserved";
+                };
+        }
+};
