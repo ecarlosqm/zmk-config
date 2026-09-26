@@ -1,31 +1,93 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
+// Migrated from crkbd/keymaps/via. Corne 3x6+3 (42 keys).
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
+#include "spanish_aliases.h"
+#include "rgb.h"
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
-
-                layer1 {
-                        status = "reserved";
-                };
-
-                laye2 {
-                        status = "reserved";
-                };
-
-                layer3 {
-                        status = "reserved";
-                };
-
-                layer4 {
-                        status = "reserved";
-                };
-        }
+    behaviors {
+        td_lsst: tap_dance_lsst {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp ES_LABK>, <&kp ES_RABK>;
+        };
+        td_paren: tap_dance_paren {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp ES_LPRN>, <&kp ES_RPRN>;
+        };
+        td_brkt: tap_dance_brkt {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp ES_LBRC>, <&kp ES_RBRC>;
+        };
+        td_brace: tap_dance_brace {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp ES_LCBR>, <&kp ES_RCBR>;
+        };
+        td_amp: tap_dance_amp {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp ES_AMPR>, <&kp ES_PIPE>;
+        };
+        td_excl: tap_dance_excl {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp ES_EXLM>, <&kp ES_IEXL>;
+        };
+        td_ques: tap_dance_ques {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp ES_QUES>, <&kp ES_IQUE>;
+        };
+        td_slsh: tap_dance_slsh {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp ES_SLSH>, <&kp ES_BSLS>;
+        };
+    };
+    keymap {
+        compatible = "zmk,keymap";
+        layer_0 {
+            bindings = <
+                &kp ESC               &kp Q                 &kp W                 &kp E                 &kp R                 &kp T                 &kp Y                 &kp U                 &kp I                 &kp O                 &kp P                 &kp LC(LG(Q))
+                &kp TAB               &kp A                 &kp S                 &kp D                 &kp F                 &kp G                 &kp H                 &kp J                 &kp K                 &kp L                 &kp SEMICOLON         LED_NEXT
+                &kp LSHFT             &kp Z                 &kp X                 &kp C                 &kp V                 &kp B                 &kp N                 &kp M                 &kp ES_COMM           &kp ES_DOT            &kp ES_MINS           &kp RSHFT
+                &kp LCTRL             &kp LALT              &kp LGUI              &kp SPACE             &mo 1                 &kp RALT
+            >;
+        };
+        layer_1 {
+            bindings = <
+                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &kp UP                &none                 &none                 LED_UP
+                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp ENTER             LED_TOG
+                &kp LSHFT             &kp LCTRL             &kp LALT              &kp LGUI              &none                 &none                 &none                 &kp BSPC              &kp DEL               &none                 &none                 LED_DOWN
+                &none                 &mo 2                 &mo 3                 &none                 &none                 &none
+            >;
+        };
+        layer_2 {
+            bindings = <
+                &none                 &kp ES_ARRO           &kp ES_NUMB           &kp ES_DLR            &kp ES_PERC           &kp ES_VIRG           &kp ES_CIRC           &kp ES_GRV            &kp ES_DQUO           &kp ES_QUOT           &none                 &none
+                &none                 &td_lsst              &td_paren             &td_brkt              &td_brace             &td_amp               &none                 &kp ES_MINS           &kp ES_SLSH           &kp ES_PLUS           &kp ES_ASTR           &none
+                &none                 &kp LGUI              &none                 &td_excl              &td_ques              &td_slsh              &none                 &kp ES_EQL            &kp ES_COLN           &none                 &none                 &none
+                &none                 &none                 &none                 &none                 &none                 &none
+            >;
+        };
+        layer_3 {
+            bindings = <
+                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none
+                &none                 &kp N1                &kp N2                &kp N3                &kp N4                &kp N5                &kp N6                &kp N7                &kp N8                &kp N9                &kp N0                &none
+                &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none
+                &none                 &none                 &none                 &none                 &none                 &none
+            >;
+        };
+    };
 };
