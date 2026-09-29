@@ -69,10 +69,10 @@
             bindings = <
                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &none                 &kp UP                &none                 &none                 &bt BT_CLR
                 &kp LSHFT             &none                 &none                 &none                 &none                 &none                 &none                 &kp LEFT              &kp DOWN              &kp RIGHT             &kp ENTER             &none
-                &noen                 &kp LCTRL             &kp LALT              &kp LGUI              &none                 &none                 &none                 &kp BSPC              &kp DEL               &none                 &none                 &none
+                &none                 &kp LCTRL             &kp LALT              &kp LGUI              &none                 &none                 &none                 &kp BSPC              &kp DEL               &none                 &none                 &none
                 &kp ES_ACUT           &mo 2                 &none                 &none                 &none                 &none
             >;
-        };z
+        };
         layer_2 {
             bindings = <
                 &none                 &kp ES_ARRO           &kp ES_NUMB           &kp ES_DLR            &kp ES_PERC           &kp ES_VIRG           &kp ES_CIRC           &kp ES_GRV            &kp ES_DQUO           &kp ES_QUOT           &none                 &none
@@ -84,7 +84,7 @@
         // Hold the outer right thumb for function keys.
         layer_3 {
             bindings = <
-                &kp C_BRI_DN          &kp C_BRI_UP          &none                &none                 &none                 &none                 &kp C_PREV            &kp C_PP              &kp C_NEXT            &kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP
+                &kp C_BRI_DN          &kp C_BRI_UP          &none                 &none                 &none                 &none                 &kp C_PREV            &kp C_PP              &kp C_NEXT            &kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP
                 &kp F1                &kp F2                &kp F3                &kp F4                &kp F5                &kp F6                &kp F7                &kp F8                &kp F9                &kp F10               &kp F11               &kp F12
                 &kp LSHFT             &kp N1                &kp N2                &kp N3                &kp N4                &kp N5                &kp N6                &kp N7                &kp N8                &kp N9                &kp N0                &kp RSHFT
                 &kp LCTRL             &kp LALT              &kp LGUI              &none                 &none                 &trans
